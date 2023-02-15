@@ -1,0 +1,145 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+
+
+    <div class="operations">
+
+        <button (click)="addContact()" title="Add contact" class="operation-btn"><i class='fas fa-user-plus'></i></button>
+        <button (click)="editContact()" title="Edit" class="operation-btn"><i class='fas fa-user-edit'></i></button>
+        <button (click)="sort()" title="Sort" class="operation-btn"><i class='fas fa-sort-amount-down'></i></button>
+        <button (click)="deleteContact()" title="Delete" class="operation-btn"><i class='far fa-trash-alt'></i></button>
+        <input type="text" class="operation-search" placeholder="Search.." id="search">
+        <button (click)="search()" class="search-button" title="Search"><i class="fa fa-search"></i></button>
+
+    </div>
+
+
+    <div class="member-entry" *ngFor="let contact of contacts">
+        <a class="member-img">
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-rounded">
+            <i class="fa fa-forward"></i>
+        </a>
+        <div class="member-details">
+            <h4 style="margin-left: 2%;"> {{contact.name}} </h4>
+            <div class="row info-list">
+                <div class="col-sm-4" *ngFor="let email of contact.emails" style="margin-left: 2%;">
+                    <i class="fa fa-envelope"></i>
+                    {{email}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="popAdd" class="popScreen">
+        <input type="text" id="contact-name" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Contact Name">
+        <input type="text" id="email-name" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Email">
+        <button type="button" (click)="add()" class="btn btn-success btn-lg popup">Add</button>
+        <button type="button" (click)="cancel()" class="btn btn-danger btn-lg popup">Cancel</button>
+    </div>
+    <div *ngIf="popDel" class="popScreen">
+        <input type="number" id="contact-number" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Contact Number">
+        <button type="button" (click)="delete()" class="btn btn-danger btn-lg popup">Delete</button>
+        <button type="button" (click)="cancel()" class="btn btn-warning btn-lg popup">Cancel</button>
+    </div>
+    <div *ngIf="popEdit" class="popScreen">
+        <input type="number" id="contact-numberr" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Contact Number">
+        <input type="text" id="contact-rename"  class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter contact new name">
+        <input type="text" id="contact-addEmail" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Add New Email">
+        <input type="number" id="contact-remove" class="form-control popup" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Number of Email to remove">
+        <button type="button" (click)="edit()" class="btn btn-success btn-lg popup">Edit</button>
+        <button type="button" (click)="cancel()" class="btn btn-danger btn-lg popup">Cancel</button>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="acontainer">
+
+
+
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Contact</th>
+                    <th>Emails</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let group of contacts">
+                    <td>{{group.name}}</td>
+                    <td *ngFor="let light of group.lights">{{light}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+
+
+     <div class="contacts-container">
+        <ul>
+            <li class="headline" *ngFor="let group of contacts">
+            {{group.name}}
+            <button class="operation-btn-email"><i class='fas fa-user-edit'></i></button>
+            <button class="operation-btn-email"><i class='far fa-trash-alt'></i></button>
+            <ul>
+                <li style="margin-top: 2%;" class="emails" *ngFor="let light of group.lights">
+                {{light}}
+                <button class="del"><i class='far fa-trash-alt'></i></button>
+                </li>
+            </ul>
+            </li>
+        </ul>
+    </div> -->
+
+
+<!-- </div> -->
+
+    <!-- -->

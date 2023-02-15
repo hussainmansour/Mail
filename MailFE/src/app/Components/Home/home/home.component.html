@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="leftScreen">
+  
+      <div class="label">
+        <div class="colors">
+          <div class="color" style="left: -10%; background-color:rgb(181, 176, 176); z-index: 4;"></div>
+          <div class="color" style="left: 0%; background-color:rgba(181, 176, 176, 0.587); z-index: 2;"></div>
+          <div class="color" style="left: 10%; background-color:rgba(181, 176, 176, 0.393); z-index: 3;"></div>
+          <div class="color" style="left: 20%; background-color:rgba(181, 176, 176, 0.185); z-index: 4;"></div>
+          <div class="head">MailBox</div>
+        </div>
+      </div>
+  
+      <div class="break"></div>
+      <br>
+      <button class="folder" routerLink = "inbox">
+        <div class="text"><span class="material-icons md-48" style="font-size:30px; margin-right: 10%;">comment</span>Inbox</div>
+      </button>
+      <button class="folder" routerLink = "sent">
+        <div class="text"><span class="material-icons md-48" style="font-size:30px; margin-right: 10%;">send</span>Sent</div>
+      </button>
+      <button class="folder" routerLink = "drafts">
+        <div class="text"><span class="material-icons md-48" style="font-size:30px; margin-right: 10%;">feed</span>Drafts</div>
+      </button>
+      <button class="folder" routerLink = "trash">
+        <div class="text"><span class="material-icons md-48" style="font-size:30px; margin-right: 10%;">delete</span>Trash</div>
+      </button>
+      <button class="folder" routerLink = "folder">
+        <div class="text"><span class="material-icons md-48" style="font-size:30px; margin-right: 10%;">folder_copy</span>Folders</div>
+      </button>
+      <br>
+      <br>
+      <br>
+      <div class="break"></div>
+
+      <button class="folder" style="margin-top: 5%;" routerLink = "contacts">
+        <div class="text"><i class='fas fa-user-circle' style="margin-right: 10%;"></i>Contacts</div>
+      </button>
+
+      <button class="folder" style="margin-top: 10%;" routerLink = "composite">
+        <div class="text"><span class="material-icons md-48 " style="font-size:30px; margin-right: 7%;">draw</span>Composite</div>
+      </button>
+    </div>
+  
+    <div class="option">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  

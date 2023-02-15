@@ -1,0 +1,50 @@
+<div class="operations">
+
+  <button (click)="selectAll()" title="Select all" class="operation-btn"><i class='far fa-calendar-check'></i></button>
+  <button (click)="delete()" title="Delete" class="operation-btn"><i class='far fa-trash-alt'></i></button>
+  <button (click)="sort()" title="Sort" class="operation-btn"><i class='fas fa-sort-amount-down'></i></button>
+  <button (click)="restore()" title="Restore" class="operation-btn"><i class='fas fa-trash-restore'></i></button>
+<!--  <div class="dropdown">-->
+<!--    <span>Move to</span>-->
+<!--    <div class="dropdown-content">-->
+<!--      <button (click)="moveToFolder($event)" class="folder" *ngFor="let folderName of folderNames">{{folderName}}</button>-->
+<!--    </div>-->
+<!--  </div>-->
+  <input type="text" class="operation-search" placeholder="Search.." id="search">
+  <button (click)="search()" class="search-button" title="Search"><i class="fa fa-search"></i></button>
+  <select class="selection" id="by">
+    <option>name</option>
+    <option>sender</option>
+    <option>receiver</option>
+    <option>date</option>
+    <option>importance</option>
+    <option>subject</option>
+    <option>body</option>
+    <option>attachments</option>
+  </select>
+
+</div>
+
+<div class="container">
+
+  <div class="inbox-mode">
+    <button (click)="newest()" class="btn"><i class='far fa-calendar-alt'></i> Newest</button>
+    <button (click)="priority()" class="btn"><i class='fas fa-star-half-alt'></i> Priority</button>
+    <button (click)="pagPrev()" style="margin-left: 50%;" class="previous round">&#8249;</button>
+    <button (click)="pagNext()" class="next round">&#8250;</button>
+  </div>
+
+  <div class="emails-container">
+
+    <div class="email" *ngFor="let email of emails">
+      <input (click)="addEmail($event)" (click)="toggleBg($event)" type="checkbox" id="{{email.mail_id}}">
+      <button class="email-box" routerLink="{{email.mail_id}}" name="{{email.mail_id}}">
+        <div class="email-name">Amr Ahmed</div>
+        <div class="email-msg">{{email.message}}</div>
+        <div class="email-date">{{formatDate(email.sended_at)}}</div>
+      </button>
+    </div>
+
+  </div>
+  <router-outlet></router-outlet>
+</div>

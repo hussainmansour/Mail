@@ -1,0 +1,40 @@
+<div class="container" id="container" style="margin: auto; margin-top: 6%;">
+	
+	<div class="form-container sign-up-container">
+		<form [formGroup]="signupform" (ngSubmit)="signup()">
+			<h1>Create Account</h1>
+			<input class="name" type="text" placeholder="Name" formControlName="name"/>
+			<input class="email" type="email" placeholder="Email" formControlName="email"/>
+			<input class="password" type=password placeholder="Password" formControlName="password"/>
+			<button [disabled]="signupform.invalid" type="submit" >Sign Up</button>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container">
+		<form [formGroup]="signinform" (ngSubmit)="signin()">
+			<h1>Sign in</h1>
+			<input class="email" type="email" placeholder="Email" formControlName="email"/>
+			<input class="password" type="password" placeholder="Password" formControlName="password"/>
+			<button [disabled]="signinform.invalid" type="submit">Sign In</button>
+		</form>
+	</div>
+
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+

@@ -1,0 +1,224 @@
+.operations {
+    margin-top: 1%;
+    margin-left: 10%;
+    background-color: rgba(98, 103, 111, 0.204);
+    box-shadow:
+    15px 17.2px 14.3px rgba(0, 0, 0, 0.031),
+    38px 43.4px 36.2px rgba(0, 0, 0, 0.055),
+    77.6px 88.6px 73.9px rgba(0, 0, 0, 0.076),
+    159.9px 182.5px 152.2px rgba(0, 0, 0, 0.1),
+    438px 500px 417px rgba(0, 0, 0, 0.19);
+    border-radius: 12rem 12rem;
+    position: relative;
+    display: flex;
+    height: 7%;
+    width: 80%;
+
+}
+
+.dropdown {
+    border: 2px  red solid;
+    margin-left: 5%;
+    margin-top: 0.7%;
+    width: 8%;
+    height: 70%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.603);
+    border: none;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9b979743;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.folder {
+    background-color: rgba(255, 255, 255, 0.783);
+    display: block;
+    margin-top: 3%;
+    border: none;
+    border-radius: 10px;
+}
+
+.folder:hover {
+    background-color: rgba(106, 101, 101, 0.106);
+}
+
+.operation-search {
+    margin-left: 5%;
+    margin-top: 0.7%;
+    background-color: rgba(255, 255, 255, 0.603);
+    border: none;
+    height: 70%;
+}
+
+.search-button {
+    width: 3.5%;
+    height: 70%;
+    margin-top: 0.7%;
+    border: none;
+    background-color: white;
+}
+
+.search-button:hover {
+    background-color: aliceblue;
+}
+
+.search-button:active {
+    background-color: rgba(166, 163, 163, 0);
+}
+
+.selection {
+    margin-left: 5%;
+    margin-top: 0.7%;
+    width: 15%;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.603);
+    font-family: "Tahoma";
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.operation-btn {
+    margin-left: 6%;
+    margin-top: 0.3%;
+    font-size: 18px;
+    width: 4.5%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.706);
+    border: none;
+    border-radius: 20px;
+}
+
+.operation-btn:hover {
+    transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    background-color: white;
+}
+
+.operation-btn:active {
+    background-color: rgba(166, 163, 163, 0);
+}
+
+.container {
+    margin-top: 2%;
+    margin-left: 1.5%;
+    width: 97%;
+    height: 84%;
+}
+
+.inbox-mode {
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    font-weight: medium;
+    background-color: transparent;
+    width: 20%;
+    border: none;
+    outline: none;
+    color: rgb(42, 48, 70);
+    cursor: pointer;
+}
+
+.btn::after {
+    content: '';
+    width: 96%;
+    height: 3%;
+    margin-left: 4px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(39, 53, 76);
+    transform: scale(0,1);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+    transform: scale(1,1);
+}
+
+.round {
+    background-color: transparent;
+    width: 5%;
+    border: none;
+    font-size: 30px;
+    margin-left: 0;
+    border-radius: 100% 100%;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+.round:hover {
+    background-color: rgba(92, 92, 90, 0.178);
+}
+
+.emails-container {
+    margin-top: 2%;
+    margin-left: 0.35%;
+    width: 99%;
+    height: 89%;
+}
+
+.email {
+    margin-top: 0.5%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+}
+
+#checkId {
+    width: 1.7%;
+    cursor: pointer;
+}
+
+.email-box {
+    background-color: transparent;
+    margin-left: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 2px rgba(76, 73, 73, 0.142) solid;
+    cursor: pointer;
+}
+
+.email-name {
+    margin: 0;
+    text-align: left;
+    font-family: "Tahoma";
+    font-size: 17px;
+}
+
+.email-msg {
+    margin-top: 0.3%;
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+.email-date {
+    margin-top: 0.3%;
+    font-size: 14px;
+    margin-left: 4.3%;
+}
+
+.email-box:hover {
+    border: 3px rgba(76, 73, 73, 0.333) solid;
+
+}

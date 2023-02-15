@@ -1,0 +1,59 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootdey">
+<div class="email-app">
+    <main>
+        <p class="text-center">New Message</p>
+        <form [formGroup]="composeform">
+            <button (click)="addreciever()" class="btn btn-success">Add reciever</button>
+            <div class="form-row mb-3" formArrayName="to">
+                <ng-container *ngFor="let email of composeform.get('to')['controls'];index as i">
+                <label for="to" class="col-2 col-sm-1 col-form-label">To:</label>
+                <div class="col-10 col-sm-11">
+                    <input type="email" class="form-control id" id="to" placeholder="Type email" formControlName="{{i}}">
+                </div>
+                </ng-container>
+            </div>
+            <div class="form-row mb-3">
+                <label for="cc" class="col-2 col-sm-1 col-form-label">Subject:</label>
+                <div class="col-10 col-sm-11">
+                    <input type="email" class="form-control" id="cc" placeholder="Type subject" formControlName="subject">
+                </div>
+            </div>
+            <div class="form-row mb-3">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-paperclip mr-2"> Attach</i>
+                </label>
+                <input id="file-upload" type="file" (change)="selectFile($event)" multiple/>
+                <label for="bcc" class="pri col-form-label">Priority:</label>
+                <select name="" id="pri" formControlName="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        <div class="row">
+            <div class="col-sm-11 ml-auto">
+                <div class="form-group mt-4">
+                    <textarea class="form-control" id="message" name="body" rows="12" placeholder="Click here to reply" formControlName="reply"></textarea>
+                    <div >
+                        <ng-container *ngFor="let file of  fileInfos">
+                            <div class="file">
+                                <i style="display: inline-block;" class="fa fa-file"></i>
+                                <a href="{{file.url}}">{{file.name}}</a>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 3%;">
+                    <button (click)="send()" type="submit" class="btn btn-success">Send</button>
+                    <button (click)="draft()" class="btn btn-light">Draft</button>
+                    <button (click)="discard()" class="btn btn-danger">Discard</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </main>
+</div>
+</div>
